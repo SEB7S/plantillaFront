@@ -6,7 +6,7 @@ export const navItems: INavData[] = [
     url: '/dashboard',
     icon: 'icon-speedometer',
     badge: {
-      variant: 'info',
+      variant: 'secondary',
       text: 'NEW'
     }
   },
@@ -185,7 +185,7 @@ export const navItems: INavData[] = [
     url: '/widgets',
     icon: 'icon-calculator',
     badge: {
-      variant: 'info',
+      variant: 'secondary',
       text: 'NEW'
     }
   },
