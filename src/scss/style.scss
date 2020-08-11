@@ -47,6 +47,7 @@ $colorGrisFuente: #73818f;
     font-weight: 700;
     color: $colorGrisFuente;
     text-transform: uppercase;
+    border: 1px solid #c5c5c54a;
 }
 
 .sidebar .nav-link.active .nav-icon {
@@ -77,6 +78,7 @@ $colorGrisFuente: #73818f;
 
 .sidebar-minimized .sidebar .nav-item:hover>.nav-link {
     background: $colorChec;
+    color: white !important;
 }
 
 a:hover {
@@ -88,4 +90,10 @@ a {
     color: $colorChec;
     text-decoration: none;
     background-color: transparent;
+}
+
+.sidebar-minimized .sidebar .nav>.nav-dropdown>.nav-dropdown-items {
+    display: none;
+    max-height: 1000px;
+    background: #efefef;
 }
