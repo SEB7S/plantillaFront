@@ -38,5 +38,43 @@ $colorGrisFuente: #73818f;
 
 .sidebar .nav-link.active {
     color: #ffffff !important;
-    background: #048243;
+    background: $colorChec;
+}
+
+.sidebar .nav-title {
+    padding: 0.75rem 1rem;
+    font-size: 80%;
+    font-weight: 700;
+    color: $colorGrisFuente;
+    text-transform: uppercase;
+}
+
+.sidebar .nav-link.active .nav-icon {
+    color: #ffffff;
+}
+
+.sidebar-minimized .sidebar .sidebar-minimizer {
+    position: fixed;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-color: $colorChec;
+}
+
+.sidebar .sidebar-minimizer:hover {
+    color: #ffffff;
+    background-color: $colorChec
+}
+
+.sidebar .sidebar-minimizer {
+    position: relative;
+    flex: 0 0 50px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: $colorChec;
+    border: 0;
+}
+
+.sidebar-minimized .sidebar .nav-item:hover>.nav-link {
+    background: $colorChec;
 }
