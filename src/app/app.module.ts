@@ -2,14 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
+import { ModalComponent } from './views/modal/modal.component';
+import { HttpModule } from '@angular/http';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
+
 
 import { AppComponent } from './app.component';
 
@@ -20,7 +22,9 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-
+import { AuthModule } from './auth/auth.module';
+//Import Providers
+import { ServicesProvider } from './config/services'; 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
 ];
@@ -40,6 +44,11 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { DatePipe } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr'
+
 
 @NgModule({
   imports: [
@@ -54,20 +63,34 @@ import { ChartsModule } from 'ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    AuthModule,
+    ModalModule.forRoot(),
+    HttpModule,
+    ToastrModule.forRoot() 
+
   ],
   declarations: [
+    ModalComponent,
     AppComponent,
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
-    LoginComponent,
-    RegisterComponent
+
+    
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
-  bootstrap: [ AppComponent ]
+  providers: [
+    ServicesProvider,
+    DatePipe,
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+
+  ],
+  bootstrap: [ AppComponent ],
+  entryComponents: [
+    ModalComponent
+  ]
 })
 export class AppModule { }
