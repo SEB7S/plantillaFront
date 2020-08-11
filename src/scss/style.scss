@@ -78,3 +78,14 @@ $colorGrisFuente: #73818f;
 .sidebar-minimized .sidebar .nav-item:hover>.nav-link {
     background: $colorChec;
 }
+
+a:hover {
+    color: $colorChec;
+    text-decoration: underline;
+}
+
+a {
+    color: $colorChec;
+    text-decoration: none;
+    background-color: transparent;
+}
