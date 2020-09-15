@@ -1,0 +1,108 @@
+<div *ngIf="!bMostrarFormato" class="row height-row card">
+    <div class="cont_heg_50 p-5 mascara">
+        <h1 *ngIf="!bMostrarPregunta" class="text-white bold w-10 m-0">Obtener formato de respuesta</h1>
+
+    </div>
+    <p *ngIf="!bMostrarPregunta" class="text-white centrar_texto bold w-100 m-0">Al Ingresar el código del proceso, la plataforma mostrará una serie de preguntas las cuales deben responderse de acuerdo a la necesidad del usuario. Esto permitirá encontrar el modelo de respuesta apropiado.</p>
+    <div class="cont_select_center">
+
+        <!-- Custom select structure -->
+        <div *ngIf="!bMostrarPregunta" class="select_mate" data-mate-select="active">
+            <form #frmPQR="ngForm" class="login-container" (ngSubmit)="validarPQR(frmPQR)">
+                <div class="card-body sombra">
+                    <div class="form__group field d-flex">
+                        <input type="input" class="form__field" placeholder="Name" name="id_pqr" id='name' ngModel required />
+                        <label for="name" class="form__label">Ingrese el código del proceso</label>
+                        <button type="submit" class="btn btn-ghost-success" value="Send"><i
+                                class="fa fa-search"></i>&nbsp;</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="bMostrarPregunta" class="col-sm-12 col-md-8 animate__animated  animate__backInLeft">
+            <div *ngFor="let i of aPregunta" class="card sombra animate__animated  animate__backInLeft">
+                <div class="card-header">
+                    {{this.arbol[0].nombre_arbol}}
+                </div>
+                <div class="card-body text-center">
+                    {{i.pregunta}}
+                </div>
+                <div class="row d-flex justify-content-center mb-2">
+                    <div class="col-2 col-sm-6 col-md-6 col-xl-6 mb-3 mb-xl-0 text-center">
+                        <button type="button" class="btn btn-outline-success" (click)="obtenerRespuesta('SI')"><i
+                                class="fa fa-thumbs-up"></i>&nbsp;Si</button>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-xl-6 mb-3 mb-xl-0 text-center">
+                        <button type="button" class="btn btn-outline-danger" (click)="obtenerRespuesta('NO')"><i
+                                class="fa fa-thumbs-down"></i>&nbsp;NO</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<ckeditor class="height-row" *ngIf="bMostrarFormato" [(ngModel)]="model.editorData"></ckeditor>
+
+<!-- End div center  
+
+<div class="titulo p-5 m-0">
+   
+
+</div>
+
+<h5 class="texto_gris bold w-50 m-0">Al Ingresar el código del proceso, la plataforma mostrará una serie de
+    preguntas las cuales deben ser respondidas de acuerdo a la necesidad del usuario. Esto permitirá encontrar el
+    modelo de respuesta apropiado.</h5>
+
+<div *ngIf="!bMostrarPregunta" class="col-sm-12 col-md-8 d-flex justify-content-center align-items-center ">
+
+    <div class="card w-100">
+        <form #frmPQR="ngForm" class="login-container" (ngSubmit)="validarPQR(frmPQR)">
+            <div class="card-body sombra">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="id_pqr" id='name' required />
+                    <label for="name" class="form__label">Ingrese el código del proceso</label>
+
+                </div>
+                 <div class="form-group">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="id_pqr"
+                            placeholder="Ingrese el código del proceso..." autocomplete="id_pqr"
+                            aria-label="Recipient's username" aria-describedby="button-addon2" ngModel required>
+
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+</div>
+<div *ngIf="bMostrarPregunta" class="col-sm-12 col-md-8 animate__animated  animate__backInLeft">
+    <div *ngFor="let i of aPregunta" class="card">
+        <div class="card-header">
+            {{this.arbol[0].nombre_arbol}}
+        </div>
+        <div class="card-body text-center">
+            {{i.pregunta}}
+        </div>
+        <div class="row d-flex justify-content-center mb-2">
+            <div class="col-2 col-sm-4 col-md-2 col-xl-4 mb-3 mb-xl-0">
+                <button type="button" class="btn btn-block btn-success" (click)="obtenerRespuesta('SI')">Si</button>
+            </div>
+            <div class="col-2 col-sm-4 col-md-2 col-xl-4 mb-3 mb-xl-0">
+                <button type="button" class="btn btn-block btn-danger" (click)="obtenerRespuesta('NO')">No</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div *ngIf="bMostrarFormato">
+    
+    <textarea [(ngModel)]="ckeditorContent" style="width: 100%;">
+
+    </textarea>
+</div> -->

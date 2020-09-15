@@ -8,6 +8,8 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { ModalComponent } from './views/modal/modal.component';
 import { HttpModule } from '@angular/http';
+import { CKEditorModule } from 'ckeditor4-angular';
+import { FormsModule } from '@angular/forms';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -50,6 +52,10 @@ import { DatePipe } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr'
 
 
+//Modulos PQR
+import { PQRModule } from './views/pqr/pqr.module';
+import { from } from 'rxjs';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -67,8 +73,10 @@ import { ToastrModule } from 'ngx-toastr'
     AuthModule,
     ModalModule.forRoot(),
     HttpModule,
-    ToastrModule.forRoot() 
-
+    ToastrModule.forRoot(), 
+    PQRModule,
+    CKEditorModule,
+    FormsModule
   ],
   declarations: [
     ModalComponent,

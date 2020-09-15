@@ -12,6 +12,31 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
+    name: 'Menú Principal'
+  },
+  {
+    name: 'Obtener Formato',
+    url: '/pqr/obtenerFormato',
+    icon: 'icon-book-open'
+  },
+  {
+    name: 'Crear Caso',
+    url: '/pqr/crearCaso',
+    icon: 'icon-plus'
+  },
+  {
+    name: 'Modificar Caso',
+    url: '/modificarCaso',
+    icon: 'icon-pencil'
+  },
+  {
+    name: 'Eliminar Caso',
+    url: '/eliminarCaso',
+    icon: 'icon-trash'
+  },
+
+  {
+    title: true,
     name: 'Theme'
   },
   {

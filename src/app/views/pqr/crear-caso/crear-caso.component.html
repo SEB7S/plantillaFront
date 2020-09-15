@@ -1,0 +1,94 @@
+<!-- Boton Flotante -->
+<div class="fixed-action-btn animated bounceIn add-btn-global"><a class="btn-floating btn-large waves-light text-center d-flex justify-content-center align-items-center" placement="bottom" title="Guardar Arbol"><i class="position-icon-save color-icon-save fa fa-save fa-lg"></i></a>
+</div>
+
+
+<div class="row m-0 d-flex height-row w-100">
+
+    <ng-container *ngFor="let dummy of ' '.repeat(nivel).split(''), let x = index">
+        <div class="col-sm p-0 card d-flex justify-content-center align-items-center">
+            <button *ngIf="!bMostrarPregunta" type="button" class="btn btn-block btn-ghost-success w-10" (click)="modalArbol.show()" data-toggle="modal" placement=" bottom " title="Añadir Pregunta "><i
+                    class="icon-plus icons font-2xl d-block m-0 "></i></button>
+            <div *ngIf="bMostrarPregunta" class="card m-4 text-center">
+                <ng-container *ngFor="let arb of aPreguntasGeneradas">
+                    <p>{{arb}}</p>
+                    <div class="d-flex justify-content-center ">
+                        <button type="button " class="btn btn-ghost-success" (click)="modalPregunta.show(); cambiarTextoResp('SI')">SI</button>
+                        <button type="button " class="btn btn-ghost-danger" (click)="modalPregunta.show(); cambiarTextoResp('NO')">NO</button>
+                        <button type="button " class="btn btn-ghost-info " placement="bottom " title="Añadir Respuesta "><i
+                                class="icon-plus icons font-2xl d-block m-0 "></i></button>
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+    </ng-container>
+
+
+
+
+</div>
+
+<div bsModal #modalArbol="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Añadir Pregunta</h4>
+                <button type="button" class="close" (click)="modalArbol.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form #frmArbol="ngForm" class="p-2" (ngSubmit)="armarArbol(frmArbol)">
+                <div class="form-group row">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" name="pregunta" placeholder="Ingrese la pregunta" ngModel required>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="modalArbol.hide()">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" value="Send">Añadir</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div bsModal #modalPregunta="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Añadir Pregunta</h4>
+                <button type="button" class="close" (click)="modalPregunta.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form #frmPregunta="ngForm" class="p-2" (ngSubmit)="agregarRespuesta(frmPregunta)">
+                <div class="form-group row">
+                    <div class="col-sm">
+                        <input type="text" class="form-control" name="pregunta" placeholder="Ingrese la pregunta" ngModel required>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="modalPregunta.hide()">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" value="Send">Añadir</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

@@ -463,7 +463,7 @@ export class ServicesProvider {
     else {
       var d1 = document.querySelector('body');
       //d1!.insertAdjacentHTML('beforeend', '<div  id="preloader"><div class="showbox"><div class="loader1"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg><div class="cargando">Cargando...</div></div></div><div class="preloader view" style="height:100vh; width:100vw; position:fixed; top:0; left:0; z-index:9999 !important; opacity:0.5; background:black;"><div class="flex-center"></div></div></div>');
-      d1!.insertAdjacentHTML('beforeend', '<div  id="preloader" class="position-fixed" style="top:0px; z-index:99999999999999999999999;"><div class="position-fixed backdrop_preload w-100 h-100vh flex-center"><div  class="avatar sombra  animated infinite pulse"><img class="logo_circulo" src="./assets/img/logoPequeno.png"></div><div class="text-white texto_cargando">Cargando...</div></div></div>')
+      d1!.insertAdjacentHTML('beforeend', '<div  id="preloader" class="position-fixed" style="top:50%; left:50%; z-index:99999999999999999999999;"><div class="position-fixed backdrop_preload w-100 h-100vh flex-center"><div  class="avatar sombra  animate__animated animate__bounce animate__infinite" style="width: 70px; height: 70px;"><img class="logo_circulo" src="../../../../assets/img/logos/logoPequeno.png"></div><div class="text-gray texto_cargando">Cargando...</div></div></div>')
 
 
     }

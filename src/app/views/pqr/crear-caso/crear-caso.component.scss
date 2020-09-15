@@ -1,0 +1,69 @@
+.height-row {
+    height: 5vh;
+}
+
+@media (max-width: 767px) {
+    .height-row {
+        height: 64vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .height-row {
+        height: 71vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .height-row {
+        height: 81vh;
+    }
+}
+
+.btn-block {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btn-global {
+    top: 7rem;
+    right: 2rem;
+}
+
+.fixed-action-btn {
+    position: fixed;
+    z-index: 998;
+    bottom: auto;
+}
+
+.fixed-action-btn {
+    margin-bottom: 0;
+    padding-top: 15px;
+}
+
+.btn-floating {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+    width: 47px;
+    height: 47px;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.color-icon-save {
+    color: #048243;
+}
+
+.altura {
+    max-height: 100%;
+    overflow: auto;
+}

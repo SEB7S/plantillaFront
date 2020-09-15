@@ -1,0 +1,179 @@
+[{
+    "id_caso": "123456789",
+    "nombre_arbol": "PROCESO 2710 EXENCIÓN DE CONTRIBUCIÓN",
+    "arbol": [{
+            "nivel": 0,
+            "id": 1,
+            "pregunta": "1. ¿LA SOLICITUD SE PRESENTA PARA ACCEDER AL BENEFICIO TRIBUTARIO POR PRIMERA VEZ?",
+            "respuesta": [{
+                    "texto_respuesta": "SI",
+                    "id_hoja": "",
+                    "text_hoja": "",
+                    "modelo": "",
+                    "nuevas_hojas": [{
+                        "nivel": 1,
+                        "id": 4,
+                        "pregunta": "1.1 ¿LA DIRECCIÓN DONDE SE EJECUTA LA ACTIVIDAD ECONÓMICA PRINCIPAL REGISTRADA EN EL RUT CORRESPONDE A LA DIRECCIÓN EN DONDE SE PRESTA EL SERVICIO?",
+                        "respuesta": [{
+                                "texto_respuesta": "SI",
+                                "id_hoja": "",
+                                "text_hoja": "",
+                                "modelo": "",
+                                "nuevas_hojas": [{
+                                    "nivel": 2,
+                                    "id": 5,
+                                    "pregunta": "1.1.2 ¿EL CÓDIGO DE LA ACTIVIDAD ECONÓMICA REGISTRADA EN EL RUT SE ENCUENTRA ENTRE LOS CÓDIGOS 011 a 360, 411 a 439 y 581 DEL DECRETO 2860 DE 2013?",
+                                    "respuesta": [{
+                                            "texto_respuesta": "SI",
+                                            "id_hoja": "",
+                                            "text_hoja": "",
+                                            "modelo": "",
+                                            "nuevas_hojas": [{
+                                                "nivel": 3,
+                                                "id": 6,
+                                                "pregunta": "1.1.3 ¿LA FECHA DE GENERACIÓN DEL RUT TIENE UNA VIGENCIA NO MAYOR A 30 DÍAS AL DÍA EN QUE SE HIZO LA SOLICITUD?",
+                                                "respuesta": [{
+                                                        "texto_respuesta": "SI",
+                                                        "id_hoja": "",
+                                                        "text_hoja": "",
+                                                        "modelo": "111111111",
+                                                        "nuevas_hojas": []
+                                                    },
+                                                    {
+                                                        "texto_respuesta": "NO",
+                                                        "id_hoja": 3,
+                                                        "text_hoja": "ir paso 3",
+                                                        "modelo": "",
+                                                        "nuevas_hojas": []
+                                                    }
+                                                ]
+                                            }]
+                                        },
+                                        {
+                                            "texto_respuesta": "NO",
+                                            "id_hoja": 3,
+                                            "text_hoja": "ir paso 3",
+                                            "modelo": "",
+                                            "nuevas_hojas": []
+                                        }
+                                    ]
+                                }]
+                            },
+                            {
+                                "texto_respuesta": "NO",
+                                "id_hoja": 3,
+                                "text_hoja": "ir paso 3",
+                                "modelo": "",
+                                "nuevas_hojas": []
+                            }
+
+                        ]
+                    }]
+                },
+                {
+                    "texto_respuesta": "NO",
+                    "id_hoja": 2,
+                    "texto_hoja": "Ir al paso  2",
+                    "modelo": "",
+                    "nuevas_hojas": []
+                }
+
+            ]
+        },
+        {
+            "nivel": 0,
+            "id": 2,
+            "pregunta": "2. ¿LA SOLICITUD ES PARA CONTINUAR CON EL BENEFICIO TRIBUTARIO?",
+            "respuesta": [{
+                    "texto_respuesta": "SI",
+                    "id_hoja": "",
+                    "text_hoja": "",
+                    "modelo": "",
+                    "nuevas_hojas": [{
+                        "nivel": 1,
+                        "id": 7,
+                        "pregunta": "2.1.1 ¿LA DIRECCIÓN DONDE SE EJECUTA LA ACTIVIDAD ECONÓMICA PRINCIPAL REGISTRADA EN EL RUT CORRESPONDE A LA DIRECCIÓN EN DONDE SE PRESTA EL SERVICIO?",
+                        "modelo": "",
+                        "respuesta": [{
+                                "texto_respuesta": "SI",
+                                "id_hoja": "",
+                                "text_hoja": "",
+                                "modelo": "",
+                                "nuevas_hojas": [{
+                                    "nivel": 2,
+                                    "id": 8,
+                                    "pregunta": "2.1.2 ¿EL CÓDIGO DE LA ACTIVIDAD ECONÓMICA SE ENCUENTRA ENTRE LOS CÓDIGOS 011 a 360, 411 a 439 y 581?",
+                                    "modelo": "",
+                                    "respuesta": [{
+                                            "texto_respuesta": "SI",
+                                            "id_hoja": "",
+                                            "text_hoja": "",
+                                            "modelo": "",
+                                            "nuevas_hojas": [{
+                                                "nivel": 3,
+                                                "id": 9,
+                                                "pregunta": "2.1.3 ¿LA FECHA DE GENERACIÓN DEL RUT TIENE UNA VIGENCIA NO MAYOR A 30 DÍAS AL DÍA EN QUE SE HIZO LA SOLICITUD?",
+                                                "respuesta": [{
+                                                        "texto_respuesta": "SI",
+                                                        "id_hoja": "",
+                                                        "text_hoja": "",
+                                                        "modelo": "22222222",
+                                                        "nuevas_hojas": []
+                                                    },
+                                                    {
+                                                        "texto_respuesta": "NO",
+                                                        "id_hoja": 3,
+                                                        "text_hoja": "ir paso 3",
+                                                        "modelo": "",
+                                                        "nuevas_hojas": []
+                                                    }
+                                                ]
+                                            }]
+                                        },
+                                        {
+                                            "texto_respuesta": "NO",
+                                            "id_hoja": 3,
+                                            "text_hoja": "ir paso 3",
+                                            "modelo": "",
+                                            "nuevas_hojas": []
+                                        }
+                                    ]
+                                }]
+                            },
+                            {
+                                "texto_respuesta": "NO",
+                                "id_hoja": 3,
+                                "text_hoja": "ir paso 3",
+                                "modelo": "",
+                                "nuevas_hojas": []
+                            }
+
+                        ]
+                    }]
+                },
+                {
+                    "texto_respuesta": "NO",
+                    "id_hoja": 2,
+                    "texto_hoja": "Ir al paso  2",
+                    "modelo": "",
+                    "nuevas_hojas": []
+                }
+
+            ]
+        },
+        {
+            "nivel": 0,
+            "id": 3,
+            "pregunta": "3. NEGACIÓN SOLICITUD BENEFICIO TRIBUTARIO",
+            "respuesta": [{
+                    "texto_respuesta": "Generar Modelo",
+                    "id_hoja": "",
+                    "texto_hoja": "",
+                    "modelo": "333333333",
+                    "nuevas_hojas": []
+                }
+
+            ]
+        }
+    ]
+}]
